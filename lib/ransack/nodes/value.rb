@@ -44,7 +44,7 @@ module Ransack
 
        def cast_to_date(val)
          if val.respond_to?(:to_date)
-           val.to_date rescue nil
+           val.to_timestamp rescue nil
          else
            y, m, d = *[val].flatten
            m ||= 1
